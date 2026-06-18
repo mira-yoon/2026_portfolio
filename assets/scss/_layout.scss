@@ -1,0 +1,26 @@
+@use "./variables" as *;
+@use "./mixin" as *;
+
+/* 폰트 초기화 */
+html {
+	font-family: $font-kor;
+	color: $color-text;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+/* 숨김 텍스트 */
+.hide-txt {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	font-size: 1px;
+	line-height: 0;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}

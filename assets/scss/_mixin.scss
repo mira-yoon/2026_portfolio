@@ -1,0 +1,50 @@
+@use 'sass:math';
+@use './variables' as *;
+
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+@mixin font($size, $weight: 400, $lh: 1.4) {
+  font-size: rem($size);
+  font-weight: $weight;
+  line-height: $lh;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: keep-all;
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bg-img($url, $size: 100%) {
+  background: url($url) no-repeat center / $size;
+}

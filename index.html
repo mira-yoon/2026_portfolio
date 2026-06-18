@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mira's Porfolio</title>
+  <meta name="description" content="Porfolio for frontend developer Mira">
+  <meta name="author" content="Mira Yoon">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
+  <!-- style -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- script -->
+  <script src="https://kit.fontawesome.com/53bbf4e99c.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <div class="container">
+        <!-- logo -->
+        <h1 class="logo">
+          <a href="/index.html">
+            <img src="./assets/img/logo.png" alt="logo">
+            <span>Mira Yoon</span>
+          </a>
+        </h1>
+
+        <!-- main_menu -->
+        <nav id="main_menu">
+          <h2>Menu</h2>
+          <ul>
+            <li class="menu_btn" data-link="#home">
+              <span>Home</span>
+            </li>
+            <li class="menu_btn" data-link="#about">
+              <span>About</span>
+            </li>
+            <li class="menu_btn" data-link="#skills">
+              <span>Skills</span>
+            </li>
+            <li class="menu_btn" data-link="#work">
+              <span>Work</span>
+            </li>
+            <li class="menu_btn" data-link="#contact">
+              <span>Contact</span>
+            </li>
+          </ul>
+          <!-- close button -->
+          <button type="button" class="btn_mobile_close" title="모바일 메뉴 닫기">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </nav>
+
+        <!-- mobile button -->
+        <button type="button" class="btn_mobile" title="전체 메뉴 열기">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="bg_mobile"></div>
+      </div>
+    </header>
+
+    <div class="main_wrap">
+      <div class="main_left">
+        <!-- home -->
+        <section id="home" class="section">
+          <div class="container">
+            <h2 class="hide-txt">Home</h2>
+            <div class="home_title">
+              <h3>Hello, <br />I'm Mira Yoon </h3>
+              <h4>Vue 기반 서비스 구축 및 운영 경험을 바탕으로<br />
+                UI를 설계하고 구현하는<br />
+                Web Publisher & UI Developer입니다.</h4>
+              <img src="./assets/img/profile1.jpg" alt="Mira's profile photo1" class="home_profile">
+              <button type="button" class="home_contact">Contact Me</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- about -->
+        <section id="about" class="section">
+          <div class="container">
+            <h2>About me</h2>
+            <div class="description">
+              <p>안녕하세요!<br />
+                저는 5년 이상의 실무 경험을 보유한 <strong>Web Publisher & UI Developer 윤미라</strong>입니다.</p>
+              <p><strong>Vue 기반 금융 서비스 구축 및 운영</strong>, React 기반 프로젝트 참여,WEB/APP 접근성 개선, 공통 컴포넌트 설계 경험을 가지고 있습니다.</p>
+              <p>사용자 경험과 유지보수성을 고려하여 재사용 가능한 UI 구조를 만드는 것을 중요하게 생각합니다.</p>
+              <p>최근에는 <strong>금융권 모바일 앱 운영 프로젝트</strong>에서 퍼블리싱 PL 역할을 수행하며 UI 개발, 접근성 개선, 협업 프로세스 정립을 담당했습니다.</p>
+              <p>앞으로도 변화하는 기술과 개발 환경에 꾸준히 적응하며, 모두에게 도움이 되는 서비스를 만들어가고자 합니다.😊</p>
+              <p class="about_hashtag"><span>#협업,</span><span>#문제해결,</span><span>#사용자경험,</span><span>#웹접근성</span></p>
+            </div>
+            <div class="about_profile_box">
+              <img src="./assets/img/profile2.jpg" alt="Mira's profile photo2" class="about_profile">
+            </div>
+            <div class="about_job">
+              <ul>
+                <li>
+                  <div class="img-wrap"><img src="./assets/img/logo_etribe.png" class="logo_etribe" alt="이트라이브 로고">
+                  </div>
+                  <div class="job_description">
+                    <p>이트라이브에서 웹퍼블리싱 및 UI개발 담당</p>
+                    <p>2023.03 ~ 현재</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="img-wrap"><img src="./assets/img/logo_wizi.png" class="logo_wizi" alt="위지런 로고"></div>
+                  <div class="job_description">
+                    <p>(주)위지런에서 웹퍼블리싱 및 UI개발 담당</p>
+                    <p>2020.07 ~ 2022.09</p>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="main_right">
+        <!-- side -->
+        <ul class="side">
+          <li class="circle prj_lcsi">
+            <div class="cover">
+              <span>LCSI Mobile</span>
+            </div>
+          </li>
+          <li class="circle prj_mg">
+            <div class="cover">
+              <span>MG Insure</span>
+            </div>
+          </li>
+          <li class="circle prj_kpmg">
+            <div class="cover">
+              <span>KPMG</span>
+            </div>
+          </li>
+          <li class="circle full">
+            <i class="fa-brands fa-vuejs"></i>
+            <span>Vue.js</span>
+          </li>
+          <li class="circle prj_lt">
+            <div class="cover">
+              <span>LotteWorld</span>
+            </div>
+          </li>
+          <li class="circle full">
+            <i class="fa-brands fa-react"></i>
+            <span>React.js</span>
+          </li>
+          <li class="circle prj_mg">
+            <div class="cover">
+              <span>MG Insure</span>
+            </div>
+          </li>
+          <li class="circle prj_kpmg">
+            <div class="cover">
+              <span>KPMG</span>
+            </div>
+          </li>
+          <li class="circle prj_lcsi">
+            <div class="coveri">
+              <span>LCSI Mobile</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- skills -->
+    <section id="skills" class="section dark">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="description">
+          <p>
+            HTML, SCSS, JavaScript를 기반으로 Vue 및 React 환경에서 UI를 구현하고 있습니다.
+          </p>
+          <p>
+            컴포넌트 단위 개발, 접근성 개선,반응형 웹 구축 경험을 바탕으로 재사용 가능하고 유지보수하기 쉬운 UI 구조를 만드는 것을 중요하게 생각합니다.
+          </p>
+          <p>
+            Git 및 SVN으로 버전 관리 및 협업 환경에 익숙하며, 생성형 AI를 활용한 코드 작성 및 문제 해결을 통해 업무 생산성을 높이고 있습니다.
+          </p>
+        </div>
+        <div class="skillset">
+          <div class="skillset_left skill_box">
+            <h3>Core Skills</h3>
+            <div class="skill">
+              <div class="skill_description">
+                <span>HTML</span>
+              </div>
+              <div class="skill_bar" data-num="100">
+                <div class="skill_value"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>CSS/SCSS</span>
+              </div>
+              <div class="skill_bar" data-num="100">
+                <div class="skill_value"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>JavaScript</span>
+              </div>
+              <div class="skill_bar" data-num="95">
+                <div class="skill_value"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>Vue.js</span>
+              </div>
+              <div class="skill_bar" data-num="90">
+                <div class="skill_value"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill_description">
+                <span>React.js</span>
+              </div>
+              <div class="skill_bar" data-num="85">
+                <div class="skill_value"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillset_right">
+            <div class="tools skill_box">
+              <h3>Collaboration</h3>
+              <ul>
+                <li><span>Git</span></li>
+                <li><span>GitHub</span></li>
+                <li><span>SVN</span></li>
+                <li><span>Jira</span></li>
+                <li><span>Figma</span></li>
+              </ul>
+            </div>
+            <div class="etc skill_box">
+              <h3>AI</h3>
+              <ul>
+                <li><span>Cursor AI</span></li>
+                <li><span>Claude Code</span></li>
+                <li><span>GitHub Copilot</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- work -->
+    <section id="work" class="section">
+      <div class="container">
+        <h2>My work</h2>
+
+        <div class="work_categories">
+          <ul>
+            <li class="category_btn selected" data-filter="*">All<span class="categoty_count">5</span></li>
+            <li class="category_btn" data-filter="build">구축<span class="categoty_count">3</span></li>
+            <li class="category_btn" data-filter="operation">운영<span class="categoty_count">2</span></li>
+          </ul>
+        </div>
+
+        <div class="work_projects">
+          <ul>
+            <li class="project" target="_blank" data-type="operation">
+              <div class="img_wrap">
+                <img src="./assets/img/prj_mg_op.png" alt="">
+              </div>
+              <div class="project_description">
+                <h3>MG새마을금고 공제앱 고도화 및 운영</h3>
+                <span class="sub_tit">Vue2 기반 UI 개발</span>
+                <span class="date">기간: 2024.11 ~ 2026.02</span>
+                <ul class="txt">
+                  <li>퍼블리싱 파트 단독 담당으로 PL 및 실무 전반 총괄 수행</li>
+                  <li>신규 UI 개발 및 UX 개선</li>
+                  <li>메인 화면 전면 개편</li>
+                  <li>APP/Web 접근성 개선 및 품질 대응</li>
+                  <li>운영 및 협업 프로세스 개선</li>
+                </ul>
+                <div class="btn_wrap">
+                  <div class="btn_item">
+                    <a href="https://insure.kfcc.co.kr" class="btn" target="_blank">View Site</a>
+                    <span class="btn_item_desc">MG새마을금고 공제 홈페이지</span>
+                  </div>
+                  <div class="btn_item">
+                    <a href="https://www.notion.so/2025-2c4502262f408033b147fc6fd02d2830?source=copy_link" class="btn"
+                      target="_blank">View Page</a>
+                    <span class="btn_item_desc">2025 퍼블리싱 성과 보고(노션페이지)</span>
+                  </div>
+                  <div class="btn_item">
+                    <a href="https://www.notion.so/2bc502262f4080bb8362e2ddd9d71dbd" class="btn" target="_blank">View
+                      Page</a>
+                    <span class="btn_item_desc">앱 접근성 개선 및 분석 사례(노션페이지)</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project" target="_blank" data-type="operation">
+              <div class="img_wrap"><img src="./assets/img/prj_lt.png" class="project_img" target="_blank" alt=""></div>
+              <div class="project_description">
+                <h3>롯데그룹사 홈페이지 통합운영</h3>
+                <span class="sub_tit">React 기반 프로젝트, Vue3 기반 프로젝트, HTML 기반 프로젝트</span>
+                <span class="date">기간: 2026.03 ~ 현재</span>
+                <ul class="txt">
+                  <li>롯데월드 어드벤처 계열 5개 사이트(잠실 어드벤처, 부산 어드벤처, 아쿠아리움, 서울스카이, 워터파크) 퍼블리싱 담당</li>
+                  <li>롯데건설, 샤롯데, 세븐앱, 롯데캐슬 등 그룹사 사이트 퍼블리싱 담당</li>
+                  <li>React 기반 서비스 UI 유지보수 및 신규 프로모션 페이지 구축</li>
+                  <li>시즌 페스티벌 랜딩 반응형 웹 구현</li>
+                </ul>
+                <div class="btn_wrap">
+                  <div class="btn_item">
+                    <a href="https://adventure.lotteworld.com/enjoy/festival/view" class="btn" target="_blank">View
+                      Page</a>
+                    <span class="btn_item_desc">롯데월드 어드벤처 시즌 페스티벌 페이지</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project" target="_blank" data-type="build">
+              <div class="img_wrap"><img src="./assets/img/prj_mg_build.png" class="project_img" target="_blank" alt="">
+              </div>
+              <div class="project_description">
+                <h3>MG새마을금고 공제앱 구축</h3>
+                <span class="sub_tit">Vue2 기반 프로젝트</span>
+                <span class="date">기간: 2023.04 ~ 2023.10</span>
+                <ul class="txt">
+                  <li>퍼블리셔 6인 협업 환경에서 주요 화면 퍼블리싱 담당</li>
+                  <li>공통 UI 컴포넌트 구축 참여</li>
+                  <li>초기 구축 단계에서 재사용성과 유지보수성을 고려한 UI 구조 기반 마련</li>
+                </ul>
+                <div class="btn_wrap">
+                  <div class="btn_item">
+                    <a href="" class="btn" target="_blank">View Site</a>
+                    <span class="btn_item_desc">MG새마을금고 공제 홈페이지</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project" target="_blank" data-type="build">
+              <div class="img_wrap"><img src="./assets/img/prj_kpmg.png" class="project_img" target="_blank" alt="">
+              </div>
+              <div class="project_description">
+                <h3>KPMG M&A센터 홈페이지 구축</h3>
+                <span class="sub_tit">React 기반 프로젝트</span>
+                <span class="date">기간: 2024.08 ~ 2024.10</span>
+                <ul class="txt">
+                  <li>퍼블리싱 파트 단독 담당으로 React 기반 컴포넌트 단위 UI 구현 수행</li>
+                  <li>React 기반 프로젝트에서 컴포넌트 단위 퍼블리싱 수행</li>
+                  <li>프레임워크 구조 이해 기반으로 안정적인 UI 구현</li>
+                </ul>
+                <div class="btn_wrap">
+                  <div class="btn_item">
+                    <a href="https://www.kpmgmnacenter.com/ko/home" class="btn" target="_blank">View Site</a>
+                    <span class="btn_item_desc">KPMG M&A센터 홈페이지</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project" target="_blank" data-type="build">
+              <div class="img_wrap"><img src="./assets/img/prj_lcsi.png" class="project_img" target="_blank" alt="">
+              </div>
+              <div class="project_description">
+                <h3>롯데호텔 LCSI 모바일 리뉴얼</h3>
+                <span class="sub_tit">HTML, SCSS, Vanilla JavaScript</span>
+                <span class="date">기간: 2024.05 ~ 2024.07</span>
+                <ul class="txt">
+                  <li>퍼블리싱 파트 단독 담당으로 PL 및 실무 전반 총괄 수행</li>
+                  <li>프로젝트 초기 퍼블리싱 환경 셋업 및 구조 설계 전담</li>
+                  <li>공통 스타일 및 컴포넌트 설계 및 구축</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="section dark">
+      <div class="container">
+        <h2>Contact</h2>
+
+        <div class="contact_info">
+          <p>Yoon Mira</p>
+          <p>mirayoon.web@gmail.com</p>
+          <p>mobile : 010 3023 2791</p>
+        </div>
+
+        <p class="contact_rights">Copyright(C) 2026 Yoon Mira - All Rights Reserved.</p>
+      </div>
+    </section>
+
+    <!-- top button -->
+    <button type="button" class="btn_top">
+      <i class="fas fa-arrow-up"></i>
+      <span class="hide-txt">상단으로 이동하기</span>
+    </button>
+
+  </div>
+</body>
+
+</html>
