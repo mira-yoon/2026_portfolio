@@ -52,6 +52,9 @@
 		font-weight: 600;
 		line-height: 1.4;
 		margin-bottom: 40px;
+		&.hide-txt {
+			margin-bottom: 0;
+		}
 
 		&::after {
 			content: "";
@@ -70,9 +73,9 @@
 	.description {
 		p {
 			font-family: $font-kor;
-			font-size: 20px;
+			font-size: 22px;
 			font-weight: 400;
-			margin-bottom: 15px;
+			margin-bottom: 14px;
 		}
 
 		strong {
@@ -167,14 +170,9 @@
 			transition: all 250ms;
 		}
 
-		&:hover span,
-		&.active:hover span {
-			color: #fff;
-			background-color: $color-light-blue;
-		}
-
 		&.active span {
 			color: $color-blue;
+			font-weight: 500;
 			border-bottom: 1px solid $color-blue;
 		}
 	}
@@ -187,7 +185,7 @@
 	top: 0;
 	width: 40px;
 	height: 40px;
-	font-size: 30px;
+	font-size: 32px;
 	line-height: 1;
 	color: $color-light-blue;
 	background-color: transparent;
@@ -197,7 +195,7 @@
 	display: none;
 	width: 40px;
 	height: 40px;
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 1;
 	color: $color-blue;
 	background-color: transparent;
@@ -215,12 +213,9 @@
 }
 
 /* home */
-#home {
-	height: 800px;
-}
-
 .home_title {
 	position: relative;
+	padding-bottom: 160px;
 
 	&::after {
 		content: "";
@@ -241,15 +236,15 @@
 		font-family: $font-en;
 		font-weight: 600;
 		line-height: 1.2;
-		margin-top: 120px;
+		margin-top: 60px;
 	}
 
 	h4 {
 		font-family: $font-kor;
 		font-size: 28px;
-		font-weight: 500;
+		font-weight: 400;
 		line-height: 1.6;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 }
 
@@ -264,6 +259,7 @@
 }
 
 .home_profile {
+	display: block;
 	position: absolute;
 	right: 100px;
 	top: 260px;
@@ -412,12 +408,12 @@
 
 .about_profile_box {
 	text-align: center;
-	margin-top: 120px;
+	padding-top: 120px;
 }
 
 .about_profile {
-	display: inline-block;
-	width: 550px;
+	display: block;
+	width: 450px;
 	margin: 0 auto;
 	transform-origin: right top;
 	transform: translate3d(0, 0, 0) rotate(0deg);
@@ -433,29 +429,31 @@
 	ul li {
 		display: flex;
 		align-items: center;
-		margin-top: 20px;
+		+ li {
+			margin-top: 20px;
+		}
 	}
 	.img-wrap {
 		flex-shrink: 0;
-		width: 130px;
+		width: 140px;
 	}
 	.logo_etribe {
-		width: 90px;
+		width: 100px;
 		padding: 10px;
 		background-color: #000;
 	}
 	.logo_wizi {
-		width: 60px;
+		width: 70px;
 	}
 
 	.job_description {
 		p {
 			font-family: $font-kor;
-			font-size: 18px;
+			font-size: 20px;
 			font-weight: 400;
 
 			&:last-child {
-				font-size: 16px;
+				font-size: 18px;
 			}
 		}
 	}
@@ -485,30 +483,38 @@
 	h3 {
 		color: $color-text;
 		font-size: 26px;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
+		&.mb30 {
+			margin-bottom: 30px;
+		}
 	}
 }
 
 .skillset_left {
 	flex-basis: 65%;
-	padding: 40px 50px;
+	padding: 45px 50px;
 }
 
 .skillset_right {
 	flex-basis: 35%;
 	background-color: $color-pale-blue;
 
-	.tools {
+	.skill_box {
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	.top {
 		padding: 45px 50px 20px;
 	}
 
-	.etc {
+	.bottom {
 		padding: 20px 50px 40px;
 	}
 }
 
 .skill {
-	margin-bottom: 15px;
+	margin-bottom: 18px;
 }
 
 .skill_description {
@@ -517,7 +523,7 @@
 	margin-bottom: 5px;
 
 	span {
-		font-size: 18px;
+		font-size: 20px;
 
 		&.skill_rate {
 			color: $color-blue;
@@ -578,15 +584,14 @@
 .category_btn {
 	position: relative;
 	display: inline-block;
-	font-family: $font-en;
+	font-family: $font-kor;
 	font-size: 18px;
 	color: $color-text;
 	text-align: center;
 	background-color: $color-pale-blue;
 	border: 2px solid transparent;
-	padding: 5px 20px 7px 35px;
+	padding: 7px 20px 7px 35px;
 	margin: 0 15px 15px 0;
-	// margin-right: 15px;
 	cursor: pointer;
 	transition: all 200ms;
 
@@ -626,7 +631,6 @@
 }
 
 .project {
-	display: flex;
 	padding: 60px 30px;
 	border-bottom: 1px solid $color-line;
 	transition: 0.5s;
@@ -636,12 +640,17 @@
 	&:last-child {
 		border: 0;
 	}
-
 	&.invisible {
 		display: none;
 	}
+
+	.project_inner {
+		display: flex;
+		text-align: left;
+	}
+
 	.img_wrap {
-		width: 400px;
+		width: 500px;
 		height: 100%;
 		flex-shrink: 0;
 		border: 1px solid $color-line;
@@ -651,11 +660,14 @@
 			width: 100%;
 		}
 	}
-}
 
-.project_description {
-	padding-left: 34px;
-	text-align: left;
+	.desc {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex: 1;
+		padding-left: 30px;
+	}
 
 	h3 {
 		font-family: $font-kor;
@@ -663,6 +675,7 @@
 		font-weight: 500;
 		letter-spacing: 1px;
 		color: $color-text;
+		text-align: center;
 		margin-bottom: 5px;
 	}
 
@@ -676,6 +689,7 @@
 		display: block;
 		font-size: 18px;
 		color: $color-blue;
+		text-align: center;
 		margin-bottom: 5px;
 	}
 
@@ -684,15 +698,15 @@
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 1.6;
-		margin: 20px 0 20px 10px;
+		text-align: center;
+		margin: 20px 0;
 		li {
 			position: relative;
-			padding-left: 16px;
 			&::before {
 				content: "-";
 				display: inline-block;
-				position: absolute;
-				left: 0;
+				position: relative;
+				margin-right: 10px;
 			}
 		}
 	}
@@ -700,35 +714,26 @@
 	.btn_wrap {
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
+		gap: 12px;
 		margin-left: 10px;
 	}
 
 	.btn_item {
-		display: flex;
-		align-items: center;
+		width: 100%;
+		text-align: center;
 	}
 
 	.btn {
 		display: inline-flex;
 		justify-content: center;
-		flex-shrink: 0;
-		width: 120px;
-		font-family: $font-en;
+		width: 100%;
+		max-width: 400px;
+		font-family: $font-kor;
 		color: #fff;
 		white-space: nowrap;
 		background-color: $color-blue;
-		padding: 8px 0;
+		padding: 8px 20px;
 		border-radius: 6px;
-		margin-right: 14px;
-	}
-
-	.btn_demo {
-		left: 25px;
-	}
-
-	.btn_github {
-		left: 125px;
 	}
 }
 
@@ -829,15 +834,11 @@
 	}
 
 	.about_profile_box {
-		margin-top: 100px;
+		padding-top: 150px;
 	}
 
 	.about_profile {
-		width: 500px;
-	}
-
-	.project_description {
-		padding-left: 25px;
+		width: 400px;
 	}
 }
 
@@ -852,7 +853,7 @@
 
 	.home_profile {
 		right: 150px;
-		top: 30vw;
+		top: 350px;
 	}
 
 	.work_categories {
@@ -866,85 +867,90 @@
 			padding: 30px 0;
 		}
 
+		.project_inner {
+			width: 100%;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.desc {
+			padding-left: 0;
+		}
+
 		.img_wrap {
 			width: 100%;
 			margin-bottom: 20px;
 		}
-	}
-
-	.project_description {
-		width: 100%;
-		padding-left: 0;
-		text-align: center;
 
 		h3 {
-			font-size: 22px;
+			font-size: 20px;
 			margin-bottom: 4px;
 		}
 
-		span {
+		.sub_tit,
+		.date {
 			font-size: 16px;
 		}
 
 		.txt {
-			font-size: 14px;
+			font-size: 16px;
 			margin: 24px 0;
-			li {
-				padding-left: 0;
-				&::before {
-					position: relative;
-					margin-right: 10px;
-				}
-			}
 		}
 
 		.btn_wrap {
 			align-items: center;
-			gap: 14px;
+			gap: 8px;
 			margin-left: 0;
 		}
 
-		.btn_item {
-			flex-direction: column-reverse;
-		}
-
-		.btn_item_desc {
-			color: $color-blue;
-			font-size: 14px;
-		}
-
 		.btn {
-			width: 100px;
+			width: 100%;
+			max-width: none;
 			font-size: 14px;
 			padding: 6px 16px;
-			margin-right: 0;
-			margin-top: 6px;
 		}
 	}
 }
 
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 768px) {
 	.section {
 		.container {
 			opacity: 1;
+			padding: 80px 20px 60px;
+		}
+
+		h2 {
+			font-size: 34px;
+			margin-bottom: 20px;
+
+			&::after {
+				top: 10px;
+				height: 12px;
+			}
+		}
+
+		.description {
+			p {
+				font-size: 16px;
+			}
 		}
 	}
 
 	#header {
 		.container {
 			position: relative;
-			padding: 5px 20px;
+			padding: 5px 10px;
 		}
 
 		h1 {
 			margin: 0 auto;
-
 			a {
-				font-size: 20px;
+				font-size: 22px;
 
 				img {
-					width: 25px;
-					height: 25px;
+					width: 22px;
+					height: 22px;
+					margin-right: 5px;
 				}
 			}
 		}
@@ -1019,176 +1025,22 @@
 		}
 	}
 
-	.home_profile {
-		top: 40vw;
-	}
-
-	.skillset {
-		display: block;
-
-		h3 {
-			font-size: 22px;
-		}
-	}
-
-	.skill_description {
-		span {
-			font-size: 16px;
-		}
-	}
-
-	.btn_top {
-		width: 45px;
-		height: 45px;
-		font-size: 28px;
-		right: 20px;
-		bottom: 20px;
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.section {
-		.container {
-			padding: 100px 40px 80px;
-		}
-
-		h2 {
-			font-size: 50px;
-			margin-bottom: 30px;
-
-			&::after {
-				height: 20px;
-			}
-		}
-
-		.description {
-			p {
-				font-size: 18px;
-			}
-		}
-	}
-
 	.home_title {
+		padding-bottom: 200px;
 		&::after {
-			left: 185px;
+			left: 100px;
 			top: 5px;
-			width: 65px;
-			height: 65px;
+			width: 30px;
+			height: 30px;
 		}
 
 		h3 {
-			font-size: 65px;
-			margin-top: 60px;
+			font-size: 35px;
+			margin-top: 0;
 		}
 
 		h4 {
-			font-size: 28px;
-		}
-	}
-
-	.home_profile {
-		left: 50px;
-		top: 50vw;
-		right: unset;
-	}
-
-	.about_hashtag {
-		span {
-			font-size: 16px;
-		}
-	}
-
-	.about_profile_box {
-		margin-top: 80px;
-	}
-
-	.about_profile {
-		width: 400px;
-	}
-
-	.about_job {
-		img {
-			width: 65px;
-			margin-right: 10px;
-		}
-
-		.job_description {
-			p {
-				font-size: 16px;
-			}
-		}
-	}
-
-	#skills h2::before {
-		right: -40px;
-		top: -20px;
-		width: 40px;
-		height: 45px;
-	}
-
-	#work h2::before {
-		right: -65px;
-		top: 10px;
-		width: 50px;
-		height: 50px;
-	}
-
-	#contact h2::before {
-		right: -55px;
-		top: 10px;
-		width: 40px;
-		height: 45px;
-	}
-
-	.contact_info {
-		p {
-			font-size: 25px;
-
-			&:first-child {
-				font-size: 32px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.section {
-		h2 {
-			font-size: 40px;
-			margin-bottom: 20px;
-
-			&::after {
-				top: 10px;
-				height: 15px;
-			}
-		}
-
-		.description {
-			p {
-				font-size: 16px;
-			}
-		}
-	}
-
-	#home {
-		height: 700px;
-	}
-
-	.home_title {
-		&::after {
-			left: 130px;
-			top: 0;
-			width: 45px;
-			height: 45px;
-		}
-
-		h3 {
-			font-size: 45px;
-			margin-top: 40px;
-		}
-
-		h4 {
-			font-size: 22px;
+			font-size: 20px;
 
 			br {
 				display: none;
@@ -1203,9 +1055,12 @@
 	}
 
 	.home_profile {
-		left: 30px;
-		top: 50vw;
 		width: 200px;
+		left: 20px;
+		top: auto;
+		right: auto;
+		bottom: -100px;
+		transform: rotate(-10deg) !important;
 	}
 
 	.about_hashtag {
@@ -1214,11 +1069,27 @@
 		}
 	}
 
+	.about_job {
+		justify-content: center;
+		margin-top: 40px;
+	}
+
+	.about_profile_box {
+		padding-top: 40px;
+	}
+
 	.about_profile {
-		width: 300px;
+		width: 100%;
+		max-width: 500px;
+		transform: none !important;
 	}
 
 	.about_job {
+		img {
+			width: 65px;
+			margin-right: 10px;
+		}
+
 		.job_description {
 			p {
 				font-size: 14px;
@@ -1251,6 +1122,20 @@
 		height: 35px;
 	}
 
+	.skillset {
+		display: block;
+
+		h3 {
+			font-size: 22px;
+		}
+	}
+
+	.skill_description {
+		span {
+			font-size: 16px;
+		}
+	}
+
 	.contact_info {
 		p {
 			font-size: 16px;
@@ -1277,101 +1162,12 @@
 	.contact_rights {
 		font-size: 14px;
 	}
-}
 
-@media screen and (max-width: 450px) {
-	.section {
-		.container {
-			padding: 80px 20px 60px;
-		}
-
-		h2 {
-			font-size: 34px;
-			margin-bottom: 10px;
-
-			&::after {
-				height: 12px;
-			}
-		}
-	}
-
-	#header {
-		.container {
-			padding: 5px 10px;
-		}
-
-		h1 {
-			a {
-				font-size: 22px;
-
-				img {
-					width: 22px;
-					height: 22px;
-					margin-right: 5px;
-				}
-			}
-		}
-	}
-
-	#home {
-		height: 600px;
-	}
-
-	.home_title {
-		&::after {
-			left: 100px;
-			top: 5px;
-			width: 30px;
-			height: 30px;
-		}
-
-		h3 {
-			font-size: 35px;
-			margin-top: 0;
-		}
-
-		h4 {
-			font-size: 20px;
-		}
-	}
-
-	.home_contact {
-		margin-top: 10px;
-	}
-
-	.home_profile {
-		left: 10px;
-		top: 75vw;
-	}
-
-	.about_profile {
-		width: 250px;
-	}
-
-	#skills h2::before {
-		right: -30px;
-		top: -12px;
-		width: 25px;
-		height: 30px;
-	}
-
-	#work h2::before {
-		right: -40px;
-		top: 7px;
-		width: 30px;
-		height: 30px;
-	}
-
-	#contact h2::before {
-		right: -35px;
-		top: 8px;
-		width: 25px;
-		height: 30px;
-	}
-}
-
-@media screen and (max-width: 375px) {
-	#home {
-		height: 550px;
+	.btn_top {
+		width: 45px;
+		height: 45px;
+		font-size: 28px;
+		right: 20px;
+		bottom: 20px;
 	}
 }

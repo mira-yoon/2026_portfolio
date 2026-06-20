@@ -153,6 +153,9 @@ html {
   line-height: 1.4;
   margin-bottom: 40px;
 }
+.section h2.hide-txt {
+  margin-bottom: 0;
+}
 .section h2::after {
   content: "";
   position: absolute;
@@ -167,9 +170,9 @@ html {
 }
 .section .description p {
   font-family: "Pretendard Variable", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 .section .description strong {
   font-weight: 500;
@@ -252,12 +255,9 @@ html {
   border-bottom: 1px solid transparent;
   transition: all 250ms;
 }
-#main_menu .menu_btn:hover span, #main_menu .menu_btn.active:hover span {
-  color: #fff;
-  background-color: #a7c5ff;
-}
 #main_menu .menu_btn.active span {
   color: #0042bf;
+  font-weight: 500;
   border-bottom: 1px solid #0042bf;
 }
 
@@ -268,7 +268,7 @@ html {
   top: 0;
   width: 40px;
   height: 40px;
-  font-size: 30px;
+  font-size: 32px;
   line-height: 1;
   color: #a7c5ff;
   background-color: transparent;
@@ -278,7 +278,7 @@ html {
   display: none;
   width: 40px;
   height: 40px;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1;
   color: #0042bf;
   background-color: transparent;
@@ -296,12 +296,9 @@ html {
 }
 
 /* home */
-#home {
-  height: 800px;
-}
-
 .home_title {
   position: relative;
+  padding-bottom: 160px;
 }
 .home_title::after {
   content: "";
@@ -321,14 +318,14 @@ html {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   line-height: 1.2;
-  margin-top: 120px;
+  margin-top: 60px;
 }
 .home_title h4 {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.6;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 @keyframes ani {
@@ -340,6 +337,7 @@ html {
   }
 }
 .home_profile {
+  display: block;
   position: absolute;
   right: 100px;
   top: 260px;
@@ -478,12 +476,12 @@ html {
 
 .about_profile_box {
   text-align: center;
-  margin-top: 120px;
+  padding-top: 120px;
 }
 
 .about_profile {
-  display: inline-block;
-  width: 550px;
+  display: block;
+  width: 450px;
   margin: 0 auto;
   transform-origin: right top;
   transform: translate3d(0, 0, 0) rotate(0deg);
@@ -499,27 +497,29 @@ html {
 .about_job ul li {
   display: flex;
   align-items: center;
+}
+.about_job ul li + li {
   margin-top: 20px;
 }
 .about_job .img-wrap {
   flex-shrink: 0;
-  width: 130px;
+  width: 140px;
 }
 .about_job .logo_etribe {
-  width: 90px;
+  width: 100px;
   padding: 10px;
   background-color: #000;
 }
 .about_job .logo_wizi {
-  width: 60px;
+  width: 70px;
 }
 .about_job .job_description p {
   font-family: "Pretendard Variable", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
 }
 .about_job .job_description p:last-child {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* skills */
@@ -544,27 +544,34 @@ html {
 .skillset h3 {
   color: #222222;
   font-size: 26px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.skillset h3.mb30 {
+  margin-bottom: 30px;
 }
 
 .skillset_left {
   flex-basis: 65%;
-  padding: 40px 50px;
+  padding: 45px 50px;
 }
 
 .skillset_right {
   flex-basis: 35%;
   background-color: #d5e7ff;
 }
-.skillset_right .tools {
+.skillset_right .skill_box {
+  font-size: 20px;
+  line-height: 1.6;
+}
+.skillset_right .top {
   padding: 45px 50px 20px;
 }
-.skillset_right .etc {
+.skillset_right .bottom {
   padding: 20px 50px 40px;
 }
 
 .skill {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .skill_description {
@@ -573,7 +580,7 @@ html {
   margin-bottom: 5px;
 }
 .skill_description span {
-  font-size: 18px;
+  font-size: 20px;
 }
 .skill_description span.skill_rate {
   color: #0042bf;
@@ -622,13 +629,13 @@ html {
 .category_btn {
   position: relative;
   display: inline-block;
-  font-family: "Poppins", sans-serif;
+  font-family: "Pretendard Variable", sans-serif;
   font-size: 18px;
   color: #222222;
   text-align: center;
   background-color: #d5e7ff;
   border: 2px solid transparent;
-  padding: 5px 20px 7px 35px;
+  padding: 7px 20px 7px 35px;
   margin: 0 15px 15px 0;
   cursor: pointer;
   transition: all 200ms;
@@ -664,7 +671,6 @@ html {
 }
 
 .project {
-  display: flex;
   padding: 60px 30px;
   border-bottom: 1px solid #e2e2e2;
   transition: 0.5s;
@@ -678,8 +684,12 @@ html {
 .project.invisible {
   display: none;
 }
+.project .project_inner {
+  display: flex;
+  text-align: left;
+}
 .project .img_wrap {
-  width: 400px;
+  width: 500px;
   height: 100%;
   flex-shrink: 0;
   border: 1px solid #e2e2e2;
@@ -690,75 +700,72 @@ html {
      object-fit: cover;
   width: 100%;
 }
-
-.project_description {
-  padding-left: 34px;
-  text-align: left;
+.project .desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  padding-left: 30px;
 }
-.project_description h3 {
+.project h3 {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 1px;
   color: #222222;
+  text-align: center;
   margin-bottom: 5px;
 }
-.project_description .sub_tit {
+.project .sub_tit {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
-.project_description .sub_tit,
-.project_description .date {
+.project .sub_tit,
+.project .date {
   display: block;
   font-size: 18px;
   color: #0042bf;
+  text-align: center;
   margin-bottom: 5px;
 }
-.project_description .txt {
+.project .txt {
   font-family: "Pretendard Variable", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
-  margin: 20px 0 20px 10px;
+  text-align: center;
+  margin: 20px 0;
 }
-.project_description .txt li {
+.project .txt li {
   position: relative;
-  padding-left: 16px;
 }
-.project_description .txt li::before {
+.project .txt li::before {
   content: "-";
   display: inline-block;
-  position: absolute;
-  left: 0;
+  position: relative;
+  margin-right: 10px;
 }
-.project_description .btn_wrap {
+.project .btn_wrap {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   margin-left: 10px;
 }
-.project_description .btn_item {
-  display: flex;
-  align-items: center;
+.project .btn_item {
+  width: 100%;
+  text-align: center;
 }
-.project_description .btn {
+.project .btn {
   display: inline-flex;
   justify-content: center;
-  flex-shrink: 0;
-  width: 120px;
-  font-family: "Poppins", sans-serif;
+  width: 100%;
+  max-width: 400px;
+  font-family: "Pretendard Variable", sans-serif;
   color: #fff;
   white-space: nowrap;
   background-color: #0042bf;
-  padding: 8px 0;
+  padding: 8px 20px;
   border-radius: 6px;
-  margin-right: 14px;
-}
-.project_description .btn_demo {
-  left: 25px;
-}
-.project_description .btn_github {
-  left: 125px;
 }
 
 /* contact */
@@ -849,13 +856,10 @@ html {
     top: 30vw;
   }
   .about_profile_box {
-    margin-top: 100px;
+    padding-top: 150px;
   }
   .about_profile {
-    width: 500px;
-  }
-  .project_description {
-    padding-left: 25px;
+    width: 400px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -867,7 +871,7 @@ html {
   }
   .home_profile {
     right: 150px;
-    top: 30vw;
+    top: 350px;
   }
   .work_categories {
     margin: 30px 0 0;
@@ -879,70 +883,72 @@ html {
   .project:first-child {
     padding: 30px 0;
   }
+  .project .project_inner {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .project .desc {
+    padding-left: 0;
+  }
   .project .img_wrap {
     width: 100%;
     margin-bottom: 20px;
   }
-  .project_description {
-    width: 100%;
-    padding-left: 0;
-    text-align: center;
-  }
-  .project_description h3 {
-    font-size: 22px;
+  .project h3 {
+    font-size: 20px;
     margin-bottom: 4px;
   }
-  .project_description span {
+  .project .sub_tit,
+  .project .date {
     font-size: 16px;
   }
-  .project_description .txt {
-    font-size: 14px;
+  .project .txt {
+    font-size: 16px;
     margin: 24px 0;
   }
-  .project_description .txt li {
-    padding-left: 0;
-  }
-  .project_description .txt li::before {
-    position: relative;
-    margin-right: 10px;
-  }
-  .project_description .btn_wrap {
+  .project .btn_wrap {
     align-items: center;
-    gap: 14px;
+    gap: 8px;
     margin-left: 0;
   }
-  .project_description .btn_item {
-    flex-direction: column-reverse;
-  }
-  .project_description .btn_item_desc {
-    color: #0042bf;
-    font-size: 14px;
-  }
-  .project_description .btn {
-    width: 100px;
+  .project .btn {
+    width: 100%;
+    max-width: none;
     font-size: 14px;
     padding: 6px 16px;
-    margin-right: 0;
-    margin-top: 6px;
   }
 }
-@media screen and (max-width: 864px) {
+@media screen and (max-width: 768px) {
   .section .container {
     opacity: 1;
+    padding: 80px 20px 60px;
+  }
+  .section h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  .section h2::after {
+    top: 10px;
+    height: 12px;
+  }
+  .section .description p {
+    font-size: 16px;
   }
   #header .container {
     position: relative;
-    padding: 5px 20px;
+    padding: 5px 10px;
   }
   #header h1 {
     margin: 0 auto;
   }
   #header h1 a {
-    font-size: 20px;
+    font-size: 22px;
   }
   #header h1 a img {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
   }
   #main_menu {
     position: absolute;
@@ -998,126 +1004,21 @@ html {
   .bg_mobile.open {
     display: block;
   }
-  .home_profile {
-    top: 40vw;
-  }
-  .skillset {
-    display: block;
-  }
-  .skillset h3 {
-    font-size: 22px;
-  }
-  .skill_description span {
-    font-size: 16px;
-  }
-  .btn_top {
-    width: 45px;
-    height: 45px;
-    font-size: 28px;
-    right: 20px;
-    bottom: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section .container {
-    padding: 100px 40px 80px;
-  }
-  .section h2 {
-    font-size: 50px;
-    margin-bottom: 30px;
-  }
-  .section h2::after {
-    height: 20px;
-  }
-  .section .description p {
-    font-size: 18px;
+  .home_title {
+    padding-bottom: 200px;
   }
   .home_title::after {
-    left: 185px;
+    left: 100px;
     top: 5px;
-    width: 65px;
-    height: 65px;
+    width: 30px;
+    height: 30px;
   }
   .home_title h3 {
-    font-size: 65px;
-    margin-top: 60px;
+    font-size: 35px;
+    margin-top: 0;
   }
   .home_title h4 {
-    font-size: 28px;
-  }
-  .home_profile {
-    left: 50px;
-    top: 50vw;
-    right: unset;
-  }
-  .about_hashtag span {
-    font-size: 16px;
-  }
-  .about_profile_box {
-    margin-top: 80px;
-  }
-  .about_profile {
-    width: 400px;
-  }
-  .about_job img {
-    width: 65px;
-    margin-right: 10px;
-  }
-  .about_job .job_description p {
-    font-size: 16px;
-  }
-  #skills h2::before {
-    right: -40px;
-    top: -20px;
-    width: 40px;
-    height: 45px;
-  }
-  #work h2::before {
-    right: -65px;
-    top: 10px;
-    width: 50px;
-    height: 50px;
-  }
-  #contact h2::before {
-    right: -55px;
-    top: 10px;
-    width: 40px;
-    height: 45px;
-  }
-  .contact_info p {
-    font-size: 25px;
-  }
-  .contact_info p:first-child {
-    font-size: 32px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .section h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
-  .section h2::after {
-    top: 10px;
-    height: 15px;
-  }
-  .section .description p {
-    font-size: 16px;
-  }
-  #home {
-    height: 700px;
-  }
-  .home_title::after {
-    left: 130px;
-    top: 0;
-    width: 45px;
-    height: 45px;
-  }
-  .home_title h3 {
-    font-size: 45px;
-    margin-top: 40px;
-  }
-  .home_title h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .home_title h4 br {
     display: none;
@@ -1128,15 +1029,31 @@ html {
     padding: 5px 15px;
   }
   .home_profile {
-    left: 30px;
-    top: 50vw;
     width: 200px;
+    left: 20px;
+    top: auto;
+    right: auto;
+    bottom: -100px;
+    transform: rotate(-10deg) !important;
   }
   .about_hashtag span {
     font-size: 14px;
   }
+  .about_job {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .about_profile_box {
+    padding-top: 40px;
+  }
   .about_profile {
-    width: 300px;
+    width: 100%;
+    max-width: 500px;
+    transform: none !important;
+  }
+  .about_job img {
+    width: 65px;
+    margin-right: 10px;
   }
   .about_job .job_description p {
     font-size: 14px;
@@ -1162,6 +1079,15 @@ html {
     width: 30px;
     height: 35px;
   }
+  .skillset {
+    display: block;
+  }
+  .skillset h3 {
+    font-size: 22px;
+  }
+  .skill_description span {
+    font-size: 16px;
+  }
   .contact_info p {
     font-size: 16px;
     word-break: break-all;
@@ -1180,76 +1106,11 @@ html {
   .contact_rights {
     font-size: 14px;
   }
-}
-@media screen and (max-width: 450px) {
-  .section .container {
-    padding: 80px 20px 60px;
-  }
-  .section h2 {
-    font-size: 34px;
-    margin-bottom: 10px;
-  }
-  .section h2::after {
-    height: 12px;
-  }
-  #header .container {
-    padding: 5px 10px;
-  }
-  #header h1 a {
-    font-size: 22px;
-  }
-  #header h1 a img {
-    width: 22px;
-    height: 22px;
-    margin-right: 5px;
-  }
-  #home {
-    height: 600px;
-  }
-  .home_title::after {
-    left: 100px;
-    top: 5px;
-    width: 30px;
-    height: 30px;
-  }
-  .home_title h3 {
-    font-size: 35px;
-    margin-top: 0;
-  }
-  .home_title h4 {
-    font-size: 20px;
-  }
-  .home_contact {
-    margin-top: 10px;
-  }
-  .home_profile {
-    left: 10px;
-    top: 75vw;
-  }
-  .about_profile {
-    width: 250px;
-  }
-  #skills h2::before {
-    right: -30px;
-    top: -12px;
-    width: 25px;
-    height: 30px;
-  }
-  #work h2::before {
-    right: -40px;
-    top: 7px;
-    width: 30px;
-    height: 30px;
-  }
-  #contact h2::before {
-    right: -35px;
-    top: 8px;
-    width: 25px;
-    height: 30px;
-  }
-}
-@media screen and (max-width: 375px) {
-  #home {
-    height: 550px;
+  .btn_top {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+    right: 20px;
+    bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

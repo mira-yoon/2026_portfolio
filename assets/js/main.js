@@ -194,27 +194,31 @@ window.addEventListener(
       requestAnimationFrame(() => {
         const scrollY = window.scrollY;
 
-        // home profile
-        if (scrollY < homeHeight) {
-          homeProfile.style.transform =
-            `translate3d(0, ${scrollY * -0.05}px, 0)
+        const isMobile = window.innerWidth <= 768;
+
+        if (!isMobile) {
+          // home profile
+          if (scrollY < homeHeight) {
+            homeProfile.style.transform =
+              `translate3d(0, ${scrollY * -0.05}px, 0)
              rotate(${scrollY * -0.01 - 10}deg)`;
-        }
+          }
 
-        // about profile
-        if (
-          scrollY > aboutTop - winHeight / 2 &&
-          scrollY < aboutTop + winHeight
-        ) {
-          aboutProfile.style.transform =
-            `translate3d(0, ${scrollY * -0.05}px, 0)
+          // about profile
+          if (
+            scrollY > aboutTop - winHeight / 2 &&
+            scrollY < aboutTop + winHeight
+          ) {
+            aboutProfile.style.transform =
+              `translate3d(0, ${scrollY * -0.05}px, 0)
              rotate(${(scrollY - winHeight) * 0.01}deg)`;
-        }
+          }
 
-        // side
-        if (scrollY < mainRightHeight) {
-          side.style.transform =
-            `translate3d(0, ${scrollY * -0.25}px, 0)`;
+          // side
+          if (scrollY < mainRightHeight) {
+            side.style.transform =
+              `translate3d(0, ${scrollY * -0.25}px, 0)`;
+          }
         }
 
         // skills
