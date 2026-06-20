@@ -532,13 +532,25 @@
 	background-color: $color-pale-blue;
 }
 
+// .skill_value {
+// 	position: absolute;
+// 	left: 0;
+// 	top: 0;
+// 	height: 10px;
+// 	background-color: $color-medium-blue;
+// 	transition: all 300ms linear;
+// }
+
 .skill_value {
 	position: absolute;
 	left: 0;
 	top: 0;
+	width: 100%;
 	height: 10px;
 	background-color: $color-medium-blue;
-	transition: all 300ms linear;
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 1.2s ease;
 }
 
 /* work */

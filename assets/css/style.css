@@ -589,9 +589,12 @@ html {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
   height: 10px;
   background-color: #2872ff;
-  transition: all 300ms linear;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.2s ease;
 }
 
 /* work */

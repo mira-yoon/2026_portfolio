@@ -239,20 +239,12 @@ window.addEventListener(
 // 숫자 애니메이션 함수 정의
 function startNumberAnimation() {
   skills.forEach((skill) => {
-    const skillBar = skill.querySelector('.skill_bar');
-    const targetRate = parseInt(skillBar.getAttribute('data-num'));
-    const skillValue = skill.querySelector('.skill_value');
-    // const skillRate = skill.querySelector('.skill_rate');
-    let initialRate = 0;
-    let numAnimation = setInterval(function () {
-      initialRate++;
-      if (initialRate == targetRate) {
-        clearInterval(numAnimation);
-      }
-      skillValue.style.width = `${initialRate}%`;
-      // skillRate.innerHTML = `${initialRate}%`;
-    }, 15);
-  })
+    const skillBar = skill.querySelector(".skill_bar");
+    const targetRate = parseInt(skillBar.getAttribute("data-num"), 10);
+    const skillValue = skill.querySelector(".skill_value");
+
+    skillValue.style.transform = `scaleX(${targetRate / 100})`;
+  });
 }
 
 
