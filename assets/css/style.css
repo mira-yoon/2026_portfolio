@@ -193,6 +193,12 @@ html {
   border-left: 1px solid #e2e2e2;
 }
 
+.home_profile,
+.about_profile,
+.side {
+  will-change: transform;
+}
+
 /* header */
 #header {
   position: fixed;
@@ -669,7 +675,7 @@ html {
   display: none;
 }
 .project .img_wrap {
-  width: 500px;
+  width: 400px;
   height: 100%;
   flex-shrink: 0;
   border: 1px solid #e2e2e2;
@@ -842,9 +848,6 @@ html {
     margin-top: 100px;
   }
   .about_profile {
-    width: 500px;
-  }
-  .project .img_wrap {
     width: 500px;
   }
   .project_description {
