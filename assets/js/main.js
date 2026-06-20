@@ -72,19 +72,24 @@ window.addEventListener('wheel', () => {
 // 뷰포트에 등장함에 따라 opacity가 올라가는 section
 const observerCallback2 = entries => {
   entries.forEach((entry) => {
-    if (entry.target.id === 'home') return; // #home은 제외시키기
+    if (entry.target.id === 'home') return;
 
-    if (entry.isIntersecting && entry.intersectionRatio > 0) {
+    if (entry.isIntersecting) {
       entry.target.classList.add("active");
     } else {
       entry.target.classList.remove("active");
     }
   });
-}
+};
 
-const observer1 = new IntersectionObserver(observerCallback2, observerOptions);
+const sectionAnimationOptions = {
+  root: null,
+  rootMargin: '0px 0px -20% 0px',
+  threshold: 0
+};
+
+const observer1 = new IntersectionObserver(observerCallback2, sectionAnimationOptions);
 sections.forEach(section => observer1.observe(section));
-
 
 
 // 뷰포트에 등장함에 따라 애니메이션 효과가 나타나는 circle

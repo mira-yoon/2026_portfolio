@@ -32,9 +32,9 @@
 	}
 
 	.container {
-		// opacity: 0.5;
-		transform: translate3d(0, 30px, 0);
-		transition: all 250ms linear;
+		opacity: 0.6;
+		transform: translate3d(0, 50px, 0);
+		transition: all 250ms ease-out;
 		padding: 120px 60px 100px;
 	}
 
