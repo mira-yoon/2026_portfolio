@@ -709,9 +709,8 @@ html {
 }
 .project h3 {
   font-family: "Pretendard Variable", sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 500;
-  letter-spacing: 1px;
   color: #222222;
   text-align: center;
   margin-bottom: 5px;
@@ -764,8 +763,7 @@ html {
   color: #fff;
   white-space: nowrap;
   background-color: #0042bf;
-  padding: 8px 20px;
-  border-radius: 6px;
+  padding: 12px 20px;
 }
 
 /* contact */
@@ -878,10 +876,10 @@ html {
   }
   .project {
     display: block;
-    padding: 30px 0;
+    padding: 40px 0;
   }
   .project:first-child {
-    padding: 30px 0;
+    padding: 40px 0;
   }
   .project .project_inner {
     width: 100%;
@@ -916,7 +914,7 @@ html {
     width: 100%;
     max-width: none;
     font-size: 14px;
-    padding: 6px 16px;
+    padding: 10px 16px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1005,7 +1003,7 @@ html {
     display: block;
   }
   .home_title {
-    padding-bottom: 200px;
+    padding-bottom: 220px;
   }
   .home_title::after {
     left: 100px;
@@ -1025,7 +1023,7 @@ html {
   }
   .home_contact {
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 5px 15px;
   }
   .home_profile {
@@ -1033,7 +1031,7 @@ html {
     left: 20px;
     top: auto;
     right: auto;
-    bottom: -100px;
+    bottom: -80px;
     transform: rotate(-10deg) !important;
   }
   .about_hashtag span {
@@ -1041,14 +1039,14 @@ html {
   }
   .about_job {
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .about_profile_box {
-    padding-top: 40px;
+    padding-top: 60px;
   }
   .about_profile {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     transform: none !important;
   }
   .about_job img {
@@ -1086,7 +1084,10 @@ html {
     font-size: 22px;
   }
   .skill_description span {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .skillset_right .skill_box {
+    font-size: 18px;
   }
   .contact_info p {
     font-size: 16px;

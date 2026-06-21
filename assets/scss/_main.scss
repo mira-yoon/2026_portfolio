@@ -671,9 +671,8 @@
 
 	h3 {
 		font-family: $font-kor;
-		font-size: 24px;
+		font-size: 26px;
 		font-weight: 500;
-		letter-spacing: 1px;
 		color: $color-text;
 		text-align: center;
 		margin-bottom: 5px;
@@ -732,8 +731,7 @@
 		color: #fff;
 		white-space: nowrap;
 		background-color: $color-blue;
-		padding: 8px 20px;
-		border-radius: 6px;
+		padding: 12px 20px;
 	}
 }
 
@@ -862,9 +860,9 @@
 
 	.project {
 		display: block;
-		padding: 30px 0;
+		padding: 40px 0;
 		&:first-child {
-			padding: 30px 0;
+			padding: 40px 0;
 		}
 
 		.project_inner {
@@ -907,7 +905,7 @@
 			width: 100%;
 			max-width: none;
 			font-size: 14px;
-			padding: 6px 16px;
+			padding: 10px 16px;
 		}
 	}
 }
@@ -1026,7 +1024,7 @@
 	}
 
 	.home_title {
-		padding-bottom: 200px;
+		padding-bottom: 220px;
 		&::after {
 			left: 100px;
 			top: 5px;
@@ -1050,7 +1048,7 @@
 
 	.home_contact {
 		font-size: 16px;
-		margin-top: 20px;
+		margin-top: 40px;
 		padding: 5px 15px;
 	}
 
@@ -1059,7 +1057,7 @@
 		left: 20px;
 		top: auto;
 		right: auto;
-		bottom: -100px;
+		bottom: -80px;
 		transform: rotate(-10deg) !important;
 	}
 
@@ -1071,16 +1069,16 @@
 
 	.about_job {
 		justify-content: center;
-		margin-top: 40px;
+		margin-top: 60px;
 	}
 
 	.about_profile_box {
-		padding-top: 40px;
+		padding-top: 60px;
 	}
 
 	.about_profile {
 		width: 100%;
-		max-width: 500px;
+		max-width: 400px;
 		transform: none !important;
 	}
 
@@ -1132,8 +1130,12 @@
 
 	.skill_description {
 		span {
-			font-size: 16px;
+			font-size: 18px;
 		}
+	}
+
+	.skillset_right .skill_box {
+		font-size: 18px;
 	}
 
 	.contact_info {
